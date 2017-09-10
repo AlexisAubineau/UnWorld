@@ -25,6 +25,31 @@
 		] 
 	},
 	{
+		"objectSlug": "staff",
+		"itemName": "Baton",
+		"description": "Baton enfermant un immense pouvoir",
+		"itemType": "Weapon",
+		"actionName": "Equiper",
+		"itemModifier": 0,
+		"Stats": [
+			{
+				"StatType": "Power",
+				"BaseValue": 12,
+				"StatName": "Puissance"
+			},
+			{
+				"StatType": "Toughness",
+				"BaseValue": 2,
+				"StatName": "Endurance"
+			},
+			{
+				"StatType": "AttackSpeed",
+				"BaseValue": 1,
+				"StatName": "Vitesse"
+			}
+		] 
+	},
+	{
 		"objectSlug": "potion_log",
 		"itemName": "Log Potion",
 		"description": "Une potion qui enregistre quelque chose sur la console.",

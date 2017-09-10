@@ -16,7 +16,6 @@ public class Player : MonoBehaviour {
 
     public void TakeDamage(int amount)
     {
-        Debug.Log("Joueur subit: " + amount + " de dommage.");
         currentHealth -= amount;
         if (currentHealth <= 0)
         {

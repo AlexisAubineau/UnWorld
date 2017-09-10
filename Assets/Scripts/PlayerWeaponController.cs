@@ -7,6 +7,7 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject EquippedWeapon { get; set; }
 
     Transform spawnProjectile;
+    Item currentlyEquippedItem;
     IWeapon equippedWeapon;
     CharacterStats characterStats;
 
@@ -20,8 +21,9 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if (EquippedWeapon != null)
         {
+            InventoryController.Instance.GiveItem(currentlyEquippedItem.ObjectSlug);
             characterStats.RemoveStatBonus(EquippedWeapon.GetComponent<IWeapon>().Stats);
-            Destroy(playerHand.transform.GetChild(0).gameObject);
+            Destroy(EquippedWeapon.transform.gameObject);
         }
 
 
@@ -30,11 +32,10 @@ public class PlayerWeaponController : MonoBehaviour
         equippedWeapon = EquippedWeapon.GetComponent<IWeapon>();
         if (EquippedWeapon.GetComponent<IProjectileWeapon>() != null)
             EquippedWeapon.GetComponent<IProjectileWeapon>().ProjectileSpawn = spawnProjectile;
-
         EquippedWeapon.transform.SetParent(playerHand.transform);
-
+        equippedWeapon.Stats = itemToEquip.Stats;
+        currentlyEquippedItem = itemToEquip;
         characterStats.AddStatBonus(itemToEquip.Stats);
-        equippedWeapon.CharacterStats = characterStats;
     }
 
     void Update()
@@ -47,10 +48,29 @@ public class PlayerWeaponController : MonoBehaviour
 
     public void PerformWeaponAttack()
     {
-        equippedWeapon.PerformAttack();
+        equippedWeapon.PerformAttack(CalculateDamage());
     }
     public void PerformWeaponSpecialAttack()
     {
         equippedWeapon.PerformSpecialAttack();
+    }
+
+    private int CalculateDamage()
+    {
+        int damageToDeal = (characterStats.GetStat(BaseStat.BaseStatType.Power).GetCalculatedStatValue()*2) +
+            Random.Range(2,8);
+        damageToDeal += CalculateCrit(damageToDeal);
+        Debug.Log("Dommage donnés: " + damageToDeal);
+        return damageToDeal;
+    }
+
+    private int CalculateCrit(int damage)
+    {
+        if (Random.value <= .10f)
+        {
+            int critDamage = (int)(damage * Random.Range(.5f, .75f));
+;            return critDamage; 
+        }
+        return 0;
     }
 }

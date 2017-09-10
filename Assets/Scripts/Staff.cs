@@ -8,6 +8,7 @@ public class Staff : MonoBehaviour, IWeapon, IProjectileWeapon
     private Animator animator;
     public List<BaseStat> Stats { get; set; }
     public CharacterStats CharacterStats { get; set; }
+    public int CurrentDamage { get; set; }
 
     public Transform ProjectileSpawn { get; set; }
     Fireball fireball;
@@ -18,8 +19,9 @@ public class Staff : MonoBehaviour, IWeapon, IProjectileWeapon
         animator = GetComponent<Animator>();
     }
 
-    public void PerformAttack()
+    public void PerformAttack(int damage)
     {
+        CurrentDamage = damage;
         animator.SetTrigger("Base_Attack");
     }
 

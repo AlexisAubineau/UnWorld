@@ -21,6 +21,7 @@ public class InventoryController : MonoBehaviour {
         consumableController = GetComponent<ConsumableController>();
         GiveItem("sword");
         GiveItem("potion_log");
+        GiveItem("staff");
 
     }
 
@@ -28,7 +29,6 @@ public class InventoryController : MonoBehaviour {
     {
         Item item = ItemDatabase.Instance.GetItem(itemSlug);
         playerItems.Add(item);
-        Debug.Log(playerItems.Count + " items dans l'inventaire. Ajoutée: " + itemSlug);
         UIEventHandler.ItemAddedToInventory(item)
 ;    }
 
