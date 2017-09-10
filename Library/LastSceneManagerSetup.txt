@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Unworld.unity
+  isLoaded: 1
+  isActive: 1
