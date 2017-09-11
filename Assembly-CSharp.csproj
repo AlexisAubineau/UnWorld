@@ -77,13 +77,15 @@
      <Compile Include="Assets\Scripts\Inventory\UIEventHandler.cs" />
      <Compile Include="Assets\Scripts\IProjectileWeapon.cs" />
      <Compile Include="Assets\Scripts\IWeapon.cs" />
+     <Compile Include="Assets\Scripts\Monster\KingSlime.cs" />
+     <Compile Include="Assets\Scripts\Monster\Slime.cs" />
+     <Compile Include="Assets\Scripts\Monster\Spawner.cs" />
      <Compile Include="Assets\Scripts\Npc.cs" />
      <Compile Include="Assets\Scripts\PickupItem.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerLevel.cs" />
      <Compile Include="Assets\Scripts\PlayerWeaponController.cs" />
      <Compile Include="Assets\Scripts\PotionLog.cs" />
-     <Compile Include="Assets\Scripts\Slime.cs" />
      <Compile Include="Assets\Scripts\Staff.cs" />
      <Compile Include="Assets\Scripts\StatBonus.cs" />
      <Compile Include="Assets\Scripts\Sword.cs" />

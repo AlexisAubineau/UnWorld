@@ -17,7 +17,7 @@ public class DropTable
             {
                 return ItemDatabase.Instance.GetItem(drop.ItemSlug);
             }
-            Debug.Log("Loot reçu");
+            Debug.Log("Loot drop");
         }
         return null;
     }

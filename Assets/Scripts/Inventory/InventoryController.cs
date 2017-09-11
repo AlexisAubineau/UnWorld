@@ -20,7 +20,6 @@ public class InventoryController : MonoBehaviour {
         playerWeaponController = GetComponent<PlayerWeaponController>();
         consumableController = GetComponent<ConsumableController>();
         GiveItem("sword");
-        GiveItem("potion_log");
         GiveItem("staff");
 
     }
