@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\CombatEvents.cs" />
      <Compile Include="Assets\Scripts\ConsumableController.cs" />
      <Compile Include="Assets\Scripts\DialogueSystem.cs" />
+     <Compile Include="Assets\Scripts\DropTable.cs" />
      <Compile Include="Assets\Scripts\Fireball.cs" />
      <Compile Include="Assets\Scripts\IConsumable.cs" />
      <Compile Include="Assets\Scripts\IEnemy.cs" />

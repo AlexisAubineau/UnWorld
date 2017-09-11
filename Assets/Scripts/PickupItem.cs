@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class PickupItem : Interactable {
-
+    public Item ItemDrop { get; set; }
     public override void Interact()
     {
-        Debug.Log("Interacting with Item!");
+        Debug.Log("looting initialisé");
+        InventoryController.Instance.GiveItem(ItemDrop);
+        Destroy(gameObject);
     }
 
 }
