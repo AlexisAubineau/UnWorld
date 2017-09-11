@@ -20,7 +20,7 @@
 			{
 				"StatType": "AttackSpeed",
 				"BaseValue": 4,
-				"StatName": "Vitesse"
+				"StatName": "Vit Atk"
 			}
 		] 
 	},
@@ -45,7 +45,7 @@
 			{
 				"StatType": "AttackSpeed",
 				"BaseValue": 1,
-				"StatName": "Vitesse"
+				"StatName": "Vit Atk"
 			}
 		] 
 	},

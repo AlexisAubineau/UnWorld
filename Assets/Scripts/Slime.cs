@@ -7,15 +7,17 @@ public class Slime : MonoBehaviour, IEnemy
     public LayerMask aggroLayerMask;
     public float currentHealth;
     public float maxHealth;
+    public int Experience { get; set; }
 
     private Player player;
-    private NavMeshAgent navAgent;
+    private UnityEngine.AI.NavMeshAgent navAgent;
     private CharacterStats characterStats;
     private Collider[] withinAggroColliders;
 
     void Start()
     {
-        navAgent = GetComponent<NavMeshAgent>();
+        Experience = 20;
+        navAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         characterStats = new CharacterStats(6, 10, 2);
         currentHealth = maxHealth;
     }
@@ -58,6 +60,7 @@ public class Slime : MonoBehaviour, IEnemy
 
     void Die()
     {
+        CombatEvents.EnemyDied(this);
         Destroy(gameObject);
     }
 }

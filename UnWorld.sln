@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{64D57B81-92F7-E1BB-CC69-99C5EA0C06C3}") = "UnWorld", "Assembly-CSharp-firstpass.csproj", "{BAB26DD6-A43F-CE93-FB0E-55E0F2A6ACB2}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnWorld", "Assembly-CSharp-firstpass.csproj", "{BAB26DD6-A43F-CE93-FB0E-55E0F2A6ACB2}"
 EndProject
-Project("{64D57B81-92F7-E1BB-CC69-99C5EA0C06C3}") = "UnWorld", "Assembly-CSharp.csproj", "{B7F4303A-7816-F920-3056-DDA0F1C0F315}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnWorld", "Assembly-CSharp.csproj", "{B7F4303A-7816-F920-3056-DDA0F1C0F315}"
 EndProject
-Project("{64D57B81-92F7-E1BB-CC69-99C5EA0C06C3}") = "UnWorld", "Assembly-CSharp-Editor.csproj", "{1C91F730-9601-334B-5CBC-F4B64B2B14AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnWorld", "Assembly-CSharp-Editor.csproj", "{1C91F730-9601-334B-5CBC-F4B64B2B14AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

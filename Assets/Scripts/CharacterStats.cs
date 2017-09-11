@@ -10,7 +10,7 @@ public class CharacterStats
         stats = new List<BaseStat>() {
             new BaseStat(BaseStat.BaseStatType.Power, power, "Puissance"),
             new BaseStat(BaseStat.BaseStatType.Toughness, toughness, "Endurance"),
-            new BaseStat(BaseStat.BaseStatType.AttackSpeed, attackSpeed, "Vitesse d'attaque")
+            new BaseStat(BaseStat.BaseStatType.AttackSpeed, attackSpeed, "Vit Atk")
         };
     }
 
